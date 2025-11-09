@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
-import { ShoppingCart, User, Menu, Utensils } from "lucide-react";
+import { ShoppingCart, User, Menu } from "lucide-react";
 import { useState } from "react";
+import mecLogo from "@/assets/mec-logo.png";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -11,10 +12,12 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-full bg-gradient-primary flex items-center justify-center shadow-md group-hover:shadow-glow transition-all">
-              <Utensils className="w-5 h-5 text-primary-foreground" />
-            </div>
+          <Link to="/" className="flex items-center gap-3 group">
+            <img 
+              src={mecLogo} 
+              alt="MEC Canteen Logo" 
+              className="w-10 h-10 rounded-full shadow-md group-hover:shadow-glow transition-all object-cover"
+            />
             <div className="hidden sm:block">
               <h1 className="text-lg font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 MEC Canteen
